@@ -33,8 +33,8 @@ func (me *IntStat) Mean() int64 {
 	return me.base + (me.varianceSum / me.n)
 }
 
-// Stddev get the rolling calculator's standard deviation
-func (me *IntStat) Stddev() int64 {
+// Stddev get the rolling calculator's variance
+func (me *IntStat) Var() int64 {
 	return (me.varianceSumSquared - ((me.varianceSum * me.varianceSum) / me.n)) / (me.n - 1)
 }
 
@@ -55,7 +55,7 @@ func (me *FloatStat) Mean() float64 {
 	return me.base + (me.varianceSum / me.n)
 }
 
-// Stddev get the rolling calculator's standard deviation
-func (me *FloatStat) Stddev() float64 {
+// Stddev get the rolling calculator's variance
+func (me *FloatStat) Var() float64 {
 	return (me.varianceSumSquared - ((me.varianceSum * me.varianceSum) / me.n)) / (me.n - 1.0)
 }
