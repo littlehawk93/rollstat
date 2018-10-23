@@ -1,5 +1,6 @@
 # rollstat
-Simple rolling average / standard deviation calculator
+
+A simple rolling average / variance calculator
 
 Example:
 
@@ -10,4 +11,4 @@ Example:
     stat.Add(-5)
 
     avg := stat.Mean()
-    std := stat.Stddev()
+    var := stat.Var()
